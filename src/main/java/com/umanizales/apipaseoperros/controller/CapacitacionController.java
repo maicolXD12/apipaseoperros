@@ -3,9 +3,7 @@ package com.umanizales.apipaseoperros.controller;
 
 import com.umanizales.apipaseoperros.modelo.Empleado;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,5 +30,14 @@ public class CapacitacionController {
         empleados [1]=new Empleado("pepito","100345463",
                 1000000);
          return empleados;
+    }
+
+    @PostMapping
+    public Empleado crearEmpleado(@RequestBody Empleado employee) {
+        //simular que recibo un empleado y lo mando a guardar
+        // en bds y ademas de recalcular bonificacion del 15%
+        // guardar bds.
+        employee.setSalario(employee.getSalario() * 1.15);
+        return employee;
     }
 }
