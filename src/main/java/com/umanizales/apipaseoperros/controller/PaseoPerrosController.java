@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaseoPerrosController {
     @GetMapping
     public String getMessage(){
-        return "hola maicol";
+        return "hola maicolXD";
     }
     @GetMapping(path = "/message2")
     public String getMessage2() {
