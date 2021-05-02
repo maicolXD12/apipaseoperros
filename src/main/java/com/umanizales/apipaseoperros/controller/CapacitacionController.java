@@ -50,8 +50,14 @@ public class CapacitacionController {
         return employee;
     }
     @GetMapping(path = "/count")
-    public int getCountEmpleados()
+    public int getCountEmployees()
     {
         return ListaSEService.contarNodos();
+    }
+
+    @GetMapping(path = "/Listar")
+    public String getTotalEmployees()
+    {
+        return ListaSEService.listarNodos();
     }
 }

@@ -28,4 +28,9 @@ public class ListaSEService {
         return ListaSE.getCont();
 
     }
+
+    public String listarNodos()
+    {
+        return ListaSE.listadoNodos();
+    }
 }
